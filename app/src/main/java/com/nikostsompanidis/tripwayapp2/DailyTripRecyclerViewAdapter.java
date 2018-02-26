@@ -1,5 +1,6 @@
 package com.nikostsompanidis.tripwayapp2;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,24 +8,26 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.nikostsompanidis.tripwayapp2.DailyTripsFragment.OnListFragmentInteractionListener;
 import com.nikostsompanidis.tripwayapp2.dummy.DummyContent.DummyItem;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
 /**
  * {@link RecyclerView.Adapter} that can display a {@link DummyItem} and makes a call to the
- * specified {@link OnListFragmentInteractionListener}.
+ * specified {@link DailyTripsFragment.OnDailyTripSelectedListener}.
  * TODO: Replace the implementation with code for your data type.
  */
-public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecyclerViewAdapter.ViewHolder> {
+public class DailyTripRecyclerViewAdapter extends RecyclerView.Adapter<DailyTripRecyclerViewAdapter.ViewHolder> {
 
-    private final List<DummyItem> mValues;
-    private final OnListFragmentInteractionListener mListener;
+    private final List<DailyTrip> mValues;
+    private final DailyTripsFragment.OnDailyTripSelectedListener mListener;
+    private Context ctx;
 
-    public MyItemRecyclerViewAdapter(List<DummyItem> items, OnListFragmentInteractionListener listener) {
+    public DailyTripRecyclerViewAdapter(List<DailyTrip> items, DailyTripsFragment.OnDailyTripSelectedListener listener, Context ctx) {
         mValues = items;
         mListener = listener;
+        this.ctx = ctx;
     }
 
     @Override
@@ -36,9 +39,16 @@ public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecycl
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
+       DailyTrip dailyTrip = mValues.get(position);
         holder.mItem = mValues.get(position);
-        holder.mIdView.setText(mValues.get(position).id);
-        holder.mContentView.setText(mValues.get(position).content);
+        holder.tripTitle.setText(dailyTrip.getTitle());
+        holder.tripDate.setText(dailyTrip.getDate());
+        holder.tripPrice.setText(dailyTrip.getPrice());
+        holder.description.setText(dailyTrip.getDescription());
+        Picasso.with(ctx)
+                .load(R.drawable.test_photo)
+                .resize(1024,780)
+                .into(holder.imageView);
 
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,7 +56,7 @@ public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecycl
                 if (null != mListener) {
                     // Notify the active callbacks interface (the activity, if the
                     // fragment is attached to one) that an item has been selected.
-                    mListener.onListFragmentInteraction(holder.mItem);
+                    mListener.OnDayliTripItemSelected(holder.mItem);
                 }
             }
         });
@@ -59,20 +69,18 @@ public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecycl
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         public final View mView;
-        public final TextView textView;
+        public final TextView tripTitle,tripDate,tripPrice,description;
         public final ImageView imageView;
-        public DummyItem mItem;
+        public DailyTrip mItem;
 
         public ViewHolder(View view) {
             super(view);
             mView = view;
-            textView = (TextView) view.findViewById(R.id.id);
-            imageView = (TextView) view.findViewById(R.id.content);
-        }
-
-        @Override
-        public String toString() {
-            return super.toString() + " '" + mContentView.getText() + "'";
+            tripTitle = (TextView) view.findViewById(R.id.dailyTripTextView);
+            tripDate = (TextView) view.findViewById(R.id.tripDateTextView);
+            tripPrice = (TextView) view.findViewById(R.id.tripPriceTextView);
+            description =(TextView) view.findViewById(R.id.descriptionTextView);
+            imageView = (ImageView) view.findViewById(R.id.dailyTripImageView);
         }
     }
 }

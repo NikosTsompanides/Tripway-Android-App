@@ -1,5 +1,7 @@
 package com.nikostsompanidis.tripwayapp2.dummy;
 
+import com.nikostsompanidis.tripwayapp2.DailyTrip;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -16,12 +18,12 @@ public class DummyContent {
     /**
      * An array of sample (dummy) items.
      */
-    public static final List<DummyItem> ITEMS = new ArrayList<DummyItem>();
+    public static final List<DailyTrip> ITEMS = new ArrayList<DailyTrip>();
 
     /**
      * A map of sample (dummy) items, by ID.
      */
-    public static final Map<String, DummyItem> ITEM_MAP = new HashMap<String, DummyItem>();
+    public static final Map<String, DailyTrip> ITEM_MAP = new HashMap<String, DailyTrip>();
 
     private static final int COUNT = 25;
 
@@ -32,13 +34,13 @@ public class DummyContent {
         }
     }
 
-    private static void addItem(DummyItem item) {
+    private static void addItem(DailyTrip item) {
         ITEMS.add(item);
-        ITEM_MAP.put(item.id, item);
+        ITEM_MAP.put(item.getTitle(), item);
     }
 
-    private static DummyItem createDummyItem(int position) {
-        return new DummyItem(String.valueOf(position), "Item " + position, makeDetails(position));
+    private static DailyTrip createDummyItem(int position) {
+        return new DailyTrip("https://www.tripway.gr/wp-content/uploads/2017/12/photo-1504868173-db962b7c3757.jpg", "Test " + position,"Every Monday","40€","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.");
     }
 
     private static String makeDetails(int position) {

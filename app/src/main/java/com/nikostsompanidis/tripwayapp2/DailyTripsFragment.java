@@ -11,12 +11,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.nikostsompanidis.tripwayapp2.dummy.DummyContent;
-import com.nikostsompanidis.tripwayapp2.dummy.DummyContent.DummyItem;
 
 /**
  * A fragment representing a list of Items.
  * <p/>
- * Activities containing this fragment MUST implement the {@link OnListFragmentInteractionListener}
+ * Activities containing this fragment MUST implement the {@link OnDailyTripSelectedListener}
  * interface.
  */
 public class DailyTripsFragment extends Fragment {
@@ -25,7 +24,7 @@ public class DailyTripsFragment extends Fragment {
     private static final String ARG_COLUMN_COUNT = "column-count";
     // TODO: Customize parameters
     private int mColumnCount = 1;
-    private OnListFragmentInteractionListener mListener;
+    private OnDailyTripSelectedListener mListener;
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
@@ -67,7 +66,7 @@ public class DailyTripsFragment extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new MyItemRecyclerViewAdapter(DummyContent.ITEMS, mListener));
+            recyclerView.setAdapter(new DailyTripRecyclerViewAdapter(DummyContent.ITEMS, mListener,getContext()));
         }
         return view;
     }
@@ -76,11 +75,11 @@ public class DailyTripsFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context instanceof OnListFragmentInteractionListener) {
-            mListener = (OnListFragmentInteractionListener) context;
+        if (context instanceof OnDailyTripSelectedListener) {
+            mListener = (OnDailyTripSelectedListener) context;
         } else {
             throw new RuntimeException(context.toString()
-                    + " must implement OnListFragmentInteractionListener");
+                    + " must implement OnDailyTripSelectedListener");
         }
     }
 
@@ -90,6 +89,11 @@ public class DailyTripsFragment extends Fragment {
         mListener = null;
     }
 
+
+    public void onListItemClick(DailyTripRecyclerViewAdapter.ViewHolder v, int position) {
+        // Send the event to the host activity
+        mListener.OnDayliTripItemSelected(v.mItem);
+    }
     /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated
@@ -100,8 +104,8 @@ public class DailyTripsFragment extends Fragment {
      * "http://developer.android.com/training/basics/fragments/communicating.html"
      * >Communicating with Other Fragments</a> for more information.
      */
-    public interface OnListFragmentInteractionListener {
+    public interface OnDailyTripSelectedListener {
         // TODO: Update argument type and name
-        void onListFragmentInteraction(DummyItem item);
+        void OnDayliTripItemSelected(DailyTrip item);
     }
 }
