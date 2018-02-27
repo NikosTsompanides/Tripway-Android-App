@@ -31,10 +31,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     startActivity(intent);
                     return true;
                 case R.id.navigation_map:
-
                     return true;
                 case R.id.navigation_about_us:
-                    // mTextMessage.setText(R.string.title_notifications);
+                    Intent i = new Intent(ctx,MainActivity.class);
+                    startActivity(i);
                     return true;
             }
             return false;

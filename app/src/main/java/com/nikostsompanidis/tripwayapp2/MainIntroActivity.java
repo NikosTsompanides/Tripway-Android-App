@@ -23,7 +23,8 @@ public class MainIntroActivity extends MaterialIntroActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        enableLastSlideAlphaExitTransition(true);
+        //enableLastSlideAlphaExitTransition(true);
+
         setSkipButtonVisible();
         getBackButtonTranslationWrapper()
                 .setEnterTranslation(new IViewTranslation() {
