@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "965568659673",
+    "firebase_url": "https://tripway-1482742733261.firebaseio.com",
+    "project_id": "tripway-1482742733261",
+    "storage_bucket": "tripway-1482742733261.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965568659673:android:2cc85a6524ce97e6",
+        "android_client_info": {
+          "package_name": "com.nikostsompanidis.tripwayapp2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "965568659673-fj9ejpgnbtc6pngo67a95f98d3a6ov2m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7ShuExEkrdpUvk1EhqnBmPr8PXODHEog"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

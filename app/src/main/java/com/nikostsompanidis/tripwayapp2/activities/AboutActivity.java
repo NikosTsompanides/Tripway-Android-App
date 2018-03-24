@@ -1,14 +1,12 @@
-package com.nikostsompanidis.tripwayapp2;
+package com.nikostsompanidis.tripwayapp2.activities;
 
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.BottomNavigationView;
-import android.support.design.widget.CoordinatorLayout;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
@@ -16,6 +14,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.nikostsompanidis.tripwayapp2.R;
 import com.vansuita.materialabout.builder.AboutBuilder;
 import com.vansuita.materialabout.views.AboutView;
 
@@ -68,27 +67,6 @@ public class AboutActivity extends AppCompatActivity {
                 .addInstagramLink("tripwayofficial")
                 .addFeedbackAction("nikostsompanides@gmail.com")
                 .addTwitterLink("Tripway17")
-                .addIntroduceAction(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        new AlertDialog.Builder(ctx)
-                                .setTitle("Terms and conditions")
-                                .setPositiveButton("Agree", new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialog, int which) {
-                                    }
-                                })
-                                .setNegativeButton("Disagree", new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                                        finishAffinity();
-                                    }
-                                })
-                                .setMessage(getResources().getString(R.string.about_brief))
-                                .show();
-                    }
-                })
                 .addFiveStarsAction()
                 .setVersionNameAsAppSubTitle()
                 .addShareAction(R.string.app_name)

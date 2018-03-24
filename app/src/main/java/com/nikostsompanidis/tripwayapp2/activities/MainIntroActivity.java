@@ -1,16 +1,15 @@
-package com.nikostsompanidis.tripwayapp2;
+package com.nikostsompanidis.tripwayapp2.activities;
 
-import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.FloatRange;
 import android.view.View;
-import android.widget.Toast;
 
+
+import com.nikostsompanidis.tripwayapp2.R;
 
 import agency.tango.materialintroscreen.MaterialIntroActivity;
-import agency.tango.materialintroscreen.MessageButtonBehaviour;
 import agency.tango.materialintroscreen.SlideFragmentBuilder;
 import agency.tango.materialintroscreen.animations.IViewTranslation;
 

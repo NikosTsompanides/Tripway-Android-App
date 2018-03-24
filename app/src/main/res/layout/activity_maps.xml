@@ -14,7 +14,7 @@
             android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:context="com.nikostsompanidis.tripwayapp2.MapsActivity"
+            tools:context="com.nikostsompanidis.tripwayapp2.activities.MapsActivity"
             tools:layout_editor_absoluteX="384dp" />
 
         <android.support.design.widget.BottomNavigationView

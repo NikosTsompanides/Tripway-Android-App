@@ -100,8 +100,7 @@
                     android:text="@string/read_more"
                     android:textAlignment="center"
                     android:textColor="@color/colorPrimaryDark"
-                    android:textStyle="bold"
-                    tools:targetApi="lollipop" />
+                    android:textStyle="bold" />
 
                 <Space
                     android:layout_width="wrap_content"
@@ -134,8 +133,7 @@
                     android:background="@null"
                     android:cropToPadding="false"
                     android:tint="@color/clear_btn_color"
-                    app:srcCompat="@drawable/ic_share_black"
-                    tools:targetApi="lollipop" />
+                    app:srcCompat="@drawable/ic_share_black" />
 
             </LinearLayout>
 

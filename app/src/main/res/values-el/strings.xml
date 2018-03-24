@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="main_activity_title">Ημερήσιες Εκδρομές </string>
+    <string name="about_activity_title">Σχετικά Με Εμάς</string>
+    <string name="title_home">Αρχική</string>
+    <string name="title_map">Χάρτης</string>
+    <string name="title_about_us">Σχετικά Με Εμάς</string>
+    <string name="title_menu_search">Αναζήτηση</string>
+    <string name="pref_previously_started">SplashActivity</string>
+    <string name="pref_previously_started_tap">TapViewer</string>
+    <string name="about_brief">Θεωρούμε ότι η πολυτιμότητα του ποιοτικού τουρισμού αυξάνεται ανάλογα με το επίπεδο του πολιτισμού και των χαρακτηριστικών των ηθών και εθίμων ενός τόπου.
+Οι εκδρομές μας λοιπόν έχουν στόχο και σαν μοναδικό σκοπό την καινοτομία και να παρακινήσουν τον καθένα να ζήσει την αυθεντικότητα και τη μοναδικότητα της Ελλάδος όλο το χρόνο.
+    </string>
+
+    <string name="title_activity_main_intro">MainIntroActivity</string>
+    <string name="title_intro">Καλώς ήλθατε!</string>
+    <string name="description_intro">Είμαστε πολύ χαρούμενοι που επιλέξατε την Tripway!Ας δούμε περισσότερα σχετικά με την εφαρμογή</string>
+    <string name="second_slide_title_intro">Ημερήσιες εκδρομές απο τη Θεσσαλονίκη!</string>
+    <string name="second_slide_description_intro">Επέλεξε την εκδρομη σου ανάμεσα σε πολλές άλλες! </string>
+    <string name="third_slide_title_intro">Κάνε κράτηση τώρα!</string>
+    <string name="third_slide_description_intro">Πραγματοποίησε την κράτηση σου εύκολα και γρήγορα ! </string>
+    <string name="fourth_slide_title_intro">Αυτό ήταν! </string>
+    <string name="fourth_slide_description_intro">Καλή διασκέδαση!</string>
+    <string name="title_activity_maps">Χάρτης</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="action_settings">Ρυθμίσεις</string>
+    <string name="map_target_view_title">Δείτε περισσότερες εκδρομές στον χάρτη!</string>
+    <string name="map_target_view_description">Ας ψάξουμε!</string>
+    <string name="title_activity_about">AboutActivity</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_descriptions">DescriptionsActivity</string>
+    <string name="description_tab_text">Πληροφορίες</string>
+    <string name="map_tab_text">Διαδρομή</string>
+    <string name="buy_now_tab">Κράτηση !</string>
+    <string name="read_more">Πληροφορίες</string>
+    <string name="loading">Φόρτωση</string>
+    <string name="loading_message">Αναζήτηση Εκδρομών !</string>
+    <string name="person">Άτομο</string>
+    <string name="no_internet_acces">Δεν υπάρχει πρόσβαση στο διαδίκτυο\n Παρακαλούμε προσπαθήστε ξανά!</string>
+    <string name="fail_response">Υπήρξε πρόβλημα στη φόρτωση δεδομένων !</string>
+    <string name="fail_response_description">Παρακαλούμε ελέγξτε την σύνσεδη σας στο διαδίκτυο </string>
+    <string name="share_text">Δες αυτή την τέλεια εκδρομή που βρήκα στο Tripway ! </string>
+    <string name="share">Μοιράσου αυτή την Εκδρομή! : </string>
+
+
+
+</resources>

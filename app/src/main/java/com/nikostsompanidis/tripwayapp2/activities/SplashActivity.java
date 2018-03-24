@@ -1,18 +1,17 @@
-package com.nikostsompanidis.tripwayapp2;
+package com.nikostsompanidis.tripwayapp2.activities;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Handler;
-import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.Toast;
+
+import com.nikostsompanidis.tripwayapp2.R;
 
 public class SplashActivity extends AppCompatActivity {
 
     private Context ctx = this;
-    private static int SPLASH_TIME_OUT = 6000;
+    private static int SPLASH_TIME_OUT = 5000;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
